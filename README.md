@@ -42,9 +42,9 @@ Now if you want to test a new image using the previously generated model, please
 
 in that filename.jpg is the path to image to be tested.
 
-Our software assumes that there is a annotation file, at the same directory level where lies the filename.jpg. The annotation should be in a file, with same name but extension txt, containing the string "x1,y1,x2,y2,x3,y3,x4,y4,ABC1234", where ABC1234 is the license plate, and x,y are the coordinates in clockwise orientation starting on the top left coordinate.  Assume that the coordinates of the image are on the superior left corner, and that grow to the right and bottow respectively. Images without license plate should contain a string "None".
+Our software assumes that there is an annotation file, at the same directory level where lies the filename.jpg. The annotation should be in a file, with same name but extension txt, containing the string "x1,y1,x2,y2,x3,y3,x4,y4,ABC1234", where ABC1234 is the license plate, and x,y are the coordinates in clockwise orientation starting on the top left coordinate (Figure below).  Assume that the coordinates of the image are on the superior left corner, and that grow to the right and bottow respectively. Images without license plate should contain a string "None".
 
-!![Annotation](https://github.com/allansp84/license-plate/blob/master/plate_annotation.png)
+![Annotation](https://github.com/allansp84/license-plate/blob/master/plate_annotation.png)
 
 ### Authors ###
 
