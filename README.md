@@ -18,10 +18,15 @@ The packages required to use this software are:
 * scikit-image==0.11.3
 * scikit-learn==0.16.1
 * scipy==0.15.1
+* shapely==1.5.13
 * six==1.9.0
 * tornado==4.2
 
-Except the opencv package, all other packages can be installed via pip.
+Except the opencv package, all other packages can be installed via pip. Before install the Python packages listed above, please install the geos library by using the follow command:
+
+     sudo apt-get install libgeos-dev libgeos-c1
+
+P.S. This library is required to use the Shapely python package.
 
 ### How can I run this software? ###
 
@@ -33,9 +38,13 @@ If you need to build a new model classification, please run the training.py scri
 
 Now if you want to test a new image using the previously generated model, please run the follow command:
 
-     ./lpdetect filename
+     ./lpdetect filename.jpg
 
-in that filename is the path to image to be tested.
+in that filename.jpg is the path to image to be tested.
+
+Our software assumes that there is a annotation file, at the same directory level where lies the filename.jpg. The annotation should be in a file, with same name but extension txt, containing the string "x1,y1,x2,y2,x3,y3,x4,y4,ABC1234", where ABC1234 is the license plate, and x,y are the coordinates in clockwise orientation starting on the top left coordinate.  Assume that the coordinates of the image are on the superior left corner, and that grow to the right and bottow respectively. Images without license plate should contain a string "None".
+
+plate_annotation.png
 
 ### Authors ###
 
