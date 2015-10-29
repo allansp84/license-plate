@@ -49,6 +49,10 @@ Now if you want to test a new image using the previously generated model, please
 
 in that filename.jpg is the path to image to be tested.
 
+Exemple:
+
+     ./lpdetect dataset/test/test-000001.jpg
+
 
 ### Authors ###
 

@@ -22,7 +22,11 @@ def time_measurement():
 
 if __name__ == "__main__":
 
-    Testing(sys.argv[1]).execute()
+    if len(sys.argv) != 2:
+        print "usage: {0} INPUT_IMAGE_PATH\n".format(sys.argv[0])
+        print "INPUT_IMAGE_PATH is the path to image to be tested."
+    else:
+        Testing(sys.argv[1]).execute()
 
     # time_measurement()
 
