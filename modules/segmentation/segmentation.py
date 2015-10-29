@@ -62,17 +62,18 @@ class Segmentation(object):
 
     def get_plate_number(self):
 
-        filename_txt = os.path.splitext(self.input_fname)[0] + ".txt"
-        data = np.loadtxt(filename_txt, dtype=np.str, delimiter=',')
+        if self.persist:
+            filename_txt = os.path.splitext(self.input_fname)[0] + ".txt"
+            data = np.loadtxt(filename_txt, dtype=np.str, delimiter=',')
 
-        # -- hack to avoid temporarily the processing of two plate in the same image
-        if len(data.shape) == 2:
-            data = data[0]
+            # -- hack to avoid temporarily the processing of two plate in the same image
+            if len(data.shape) == 2:
+                data = data[0]
 
-        data = np.char.strip(np.char.upper(data))
+            data = np.char.strip(np.char.upper(data))
 
-        if (data != 'NONE').all():
-            self.plate_number = str(data[8]).upper()
+            if (data != 'NONE').all():
+                self.plate_number = str(data[8]).upper()
 
     def sliding_concentric_windows(self, img):
 
@@ -250,7 +251,7 @@ class Segmentation(object):
                 self.characters.append([6, self.plate_image[2:48, 170:195]])
                 # found_all_characters = False
 
-    def extract_features(self, persist=True):
+    def extract_features(self):
 
         for idx in xrange(len(self.characters)):
             self.feature_fnames.append("{0}/{1}/{2}/{3}.npy".format(self.output_fname, self.plate_number, idx, self.plate_number[idx]))
