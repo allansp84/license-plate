@@ -22,11 +22,11 @@ The packages required to use this software are:
 * six==1.9.0
 * tornado==4.2
 
-Except the opencv package, all other packages can be installed via pip. Before install the Python packages listed above, please install the geos library by using the follow command:
+Except the opencv package, all other packages can be installed via pip. Before installing the Python packages listed above, please install the geos library by using the follow command:
 
      sudo apt-get install libgeos-dev libgeos-c1
 
-P.S. This library is required to use the Shapely python package.
+P.S.: This library is required to use the shapely python package.
 
 ### How can I run this software? ###
 
