@@ -11,6 +11,5 @@
 
 # diretory ignore
 .idea/
-dataset/*
 working*
 old*
