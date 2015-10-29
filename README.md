@@ -36,7 +36,7 @@ If you need to build a new model classification, please run the training.py scri
      python tranining.py
      mv working models
 
-     Our software assumes that there is an annotation file for each image file, at the same directory level where lies the image files. The annotation should be in a file, with same name but extension txt, containing the string "x1,y1,x2,y2,x3,y3,x4,y4,ABC1234", where ABC1234 is the license plate, and x,y are the coordinates in clockwise orientation starting on the top left coordinate (Figure 1).  Assume that the coordinates of the image are on the superior left corner, and that grow to the right and bottow respectively. Images without license plate should contain a string "None".
+Our software assumes that there is an annotation file for each image file, at the same directory level where lies the image files. The annotation should be in a file, with same name but extension txt, containing the string "x1,y1,x2,y2,x3,y3,x4,y4,ABC1234", where ABC1234 is the license plate, and x,y are the coordinates in clockwise orientation starting on the top left coordinate (Figure 1).  Assume that the coordinates of the image are on the superior left corner, and that grow to the right and bottow respectively. Images without license plate should contain a string "None".
 
 ![Annotation](https://github.com/allansp84/license-plate/blob/master/plate_annotation.png "Figure 1 - Orientation of the plate coordinates.")
 
